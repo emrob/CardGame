@@ -14,20 +14,18 @@ public class Deck {
         return this.cards.size();
     }
 
-    public void createDeck(Card card, SuitType suit, ValueType value) {
-        for (SuitType suit : SuitType.getSuit()) {
-            for (SuitType suit : SuitType.getSuit()) {
-                for (ValueType values : ValueType.getvalue()) {
-                    cards.add(new Card(suit, value));
-
-                }
-
+    public void createDeck() {
+        for (SuitType suit : SuitType.values()) {
+            for (ValueType value : ValueType.values()) {
+                cards.add(new Card(suit, value));
 
             }
 
-        }
 
+        }
 
     }
 
+
 }
+

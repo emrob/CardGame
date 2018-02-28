@@ -11,12 +11,21 @@ public class TestDeck {
     Card card;
 
     @Before
-    public void before(){
+    public void before() {
         deck = new Deck();
     }
 
     @Test
-    public void checkNumDealt(){
+    public void checkNumDealt() {
         assertEquals(0, deck.dealtSize());
     }
+
+    @Test
+    public void checkCreateDeck() {
+        deck.createDeck();
+        assertEquals(52, deck.dealtSize());
+    }
+
+
+}
 
